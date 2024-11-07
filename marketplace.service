@@ -1,10 +1,10 @@
 [Unit]
-Description=Launch the MarketPlace Flask server
+Description=Launch the TestMarketPlace Flask server
 After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStart=/MarketPlace/.venv/bin/gunicorn --chdir /MarketPlace --bind 0.0.0.0:80 "app:launch_app()"
+ExecStart=/TestMarketPlace/.venv/bin/gunicorn --chdir /TestMarketPlace --bind 0.0.0.0:80 "app:launch_app()"
 
 [Install]
 WantedBy=multi-user.target
