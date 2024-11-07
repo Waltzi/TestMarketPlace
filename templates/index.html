@@ -6,13 +6,13 @@
 <title>Marketplace</title>
 <link rel="stylesheet" href="style.css">
 <script>
-    const server = 'http://<EC2-IP>'; // Replace <EC2-IP> with your EC2 instance's public IP or domain
+    const server = 'https://<EC2-IP>'; // Replace <EC2-IP> with your EC2 instance's public IP or domain
 
     async function fetchUserData() {
         try {
             const response = await fetch(`${server}/get_all_users`);
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error(`HTTPS error! Status: ${response.status}`);
             }
             const data = await response.json();
             console.log(data); // Inspect the data structure
@@ -36,7 +36,7 @@
         try {
             const response = await fetch(`${server}/get_all_products`);
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                throw new Error(`HTTPS error! Status: ${response.status}`);
             }
             const data = await response.json();
             console.log(data); // Inspect the data structure
