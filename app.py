@@ -82,4 +82,4 @@ def launch_app():
 
 if __name__ == "__main__":
     app = launch_app()
-    app.run(port=80, debug=True)
+    app.run(port=443, debug=True)
